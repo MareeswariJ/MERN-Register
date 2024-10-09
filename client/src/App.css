@@ -1,38 +1,236 @@
-.App {
+
+body{
+  margin:0;
+  padding:0;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgba(244, 165, 96, 0.644);
+ 
+}
+
+.navbar{
+  background-color:#fff;
+  position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+   
+}
+.icons{
+  font-size: larger;
+  font-weight: bolder;
+}
+.nav-item{
+  font-size: larger;
+ 
+  
+}
+.navbar-nav{
+  margin: auto;
+}
+
+.nav-link{
+ font-weight: 500;
+}
+
+
+
+/* Registration Form Styles */
+.register-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Maximum width for larger screens */
   text-align: center;
+  margin: 80px auto; /* Centering the container */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.register-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.register-form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Align labels to the left */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.register-label {
+  display: block; /* Make labels block elements */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.register-input {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners for inputs */
+  transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.register-input:focus {
+  border-color: rgba(244, 165, 96, 0.644); /* Highlight border on focus */
+}
+
+.hobby-input-group {
+  display: flex; /* Flexbox for hobby inputs */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between inputs and button */
+}
+
+.register-btn {
+  width: 100%;
+  background-color: rgba(244, 165, 96, 0.644);
   color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transition for button hover */
 }
 
-.App-link {
-  color: #61dafb;
+.register-btn:hover {
+  background-color: rgba(244, 165, 96, 0.8); /* Darker shade on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.register-footer {
+  margin-top: 20px;
+}
+
+/* Error and Success Messages */
+.register-error {
+  color: red;
+}
+
+.register-success {
+  color: green;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 20px; /* Adjust padding for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .register-heading {
+    font-size: 20px; /* Smaller heading for mobile */
   }
+
+  .register-input {
+    padding: 8px; /* Less padding for smaller screens */
+  }
+
+  .register-btn {
+    padding: 10px; /* Less padding for smaller buttons */
+  }
+}
+
+@media (min-width: 768px) {
+  .register-container {
+    padding: 40px; /* Increased padding for larger screens */
+  }
+}
+
+
+.login-container {
+  max-width: 400px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding inside the container */
+  border: 1px solid #ccc; /* Add a light border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #fff; /* White background for contrast */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.login-heading {
+  text-align: center; /* Center align the heading */
+  font-size: 24px; /* Increase font size for the heading */
+  margin-bottom: 20px; /* Spacing below the heading */
+  color: black; /* Custom color for the heading */
+}
+
+.login-error, .login-success {
+  text-align: center; /* Center align messages */
+  margin: 10px 0; /* Spacing around messages */
+}
+
+.login-form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.login-form-group {
+  margin-bottom: 15px; /* Space between input fields */
+}
+
+.login-label {
+  display: block; /* Ensure label takes full width */
+  margin-bottom: 5px; /* Spacing below label */
+  font-weight: bold; /* Make label text bold */
+}
+
+.login-input {
+  width: 100%; /* Full width input */
+  padding: 10px; /* Padding inside input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 16px; /* Font size for input text */
+}
+
+.login-btn {
+  padding: 10px; /* Padding inside button */
+  background-color: rgba(244, 165, 96, 0.644); /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size for button text */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.login-btn:hover {
+  background-color: rgba(244, 165, 96, 0.644); /* Darker shade on hover */
+}
+
+.login-footer {
+  text-align: center; /* Center align footer text */
+  margin-top: 10px; /* Space above footer text */
+}
+
+.login-footer a {
+  color: rgba(244, 165, 96, 0.644); /* Link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold link text */
+}
+
+.login-footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Hobbies button styles */
+.hobby-button {
+  padding: 8px 12px; /* Padding for buttons */
+  background-color: #4CAF50; /* Green color for add button */
+  color: white; /* Text color for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size for buttons */
+  margin-top: 5px; /* Margin above buttons */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.hobby-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.remove-hobby-button {
+  background-color: #f44336; /* Red color for remove button */
+}
+
+.remove-hobby-button:hover {
+  background-color: #e53935; /* Darker red on hover */
 }
